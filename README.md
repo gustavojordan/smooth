@@ -1,4 +1,4 @@
-# EDR
+# ERD
 ![](eer.png)
 # Commands to execute outside Docker
 `docker-compose build`
