@@ -23,4 +23,6 @@
 
 `php artisan config:cache --env=testing`
 
-`composer test` 
+`php artisan test` 
+
+`./vendor/bin/codecept run api` 
