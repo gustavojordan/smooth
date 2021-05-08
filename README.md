@@ -13,16 +13,13 @@
 
 `php artisan migrate:install`
 
-`php artisan config:clear`
+`php artisan config:cache --env=local`
 
-`php artisan config:cache`
+`php artisan migrate --env=local`
 
-`php artisan migrate`
-
-`php artisan db:seed`
+`php artisan db:seed --env=local`
 
 # Test commands inside of Docker
-`php artisan config:clear`
 
 `php artisan config:cache --env=testing`
 
