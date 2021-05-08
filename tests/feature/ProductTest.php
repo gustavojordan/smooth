@@ -13,7 +13,7 @@ class ProductTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function getProduct()
+    public function testGetProduct()
     {
         $this->seed();
         $response = $this->json('POST', 'api/auth/login', ['email' => 'admin@admin.com', 'password' => '123456']);
