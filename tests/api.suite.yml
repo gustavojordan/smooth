@@ -1,0 +1,18 @@
+class_name: ApiTester
+modules:
+    enabled:
+        - REST:
+            url: /api
+            depends: Laravel
+        - \Helper\Api
+        - Db:
+            dsn: 'mysql:host=mysql-db-test;dbname=smooth'
+            user: 'smooth'
+            password: 'smooth'
+            populate: true
+            cleanup: true
+        - Laravel:
+            environment_file: .env.testing
+            run_database_migrations: true
+            part: ORM
+

@@ -6,11 +6,7 @@
  - [x] Compose file version 3.5
  
 # EDR
-![](edr.png)
-
-# Collection Documentation POSTMAN
-https://documenter.getpostman.com/view/12253802/T1DwbZ7d
-  
+![](eer.png)
 # Commands to execute outside Docker
 `docker-compose build`
 
@@ -20,27 +16,14 @@ https://documenter.getpostman.com/view/12253802/T1DwbZ7d
 
 # Commands to execute inside of Docker
 
-`composer require tymon/jwt-auth:dev-develop --prefer-source`
-
 `composer install`
-
 `php artisan migrate:install`
-
+`php artisan config:clear`
+`php artisan config:cache`
 `php artisan migrate`
+`php artisan db:seed`
 
- - Creating first user using Tinker
- 
-`php artisan tinker`
-
-`$user = new \App\User();`
-
-`$user->name = "Gustavo";`
-
-`$user->email = 'gustavo@caffe.com';`
-
-`$user->password = bcrypt('12356');`
-
-`$user->save();`
-
-`exit()`
-
+# Test commands inside of Docker
+`php artisan config:clear`
+`php artisan config:cache --env=testing`
+`composer test` OR `./vendor/bin/codecept run api`
